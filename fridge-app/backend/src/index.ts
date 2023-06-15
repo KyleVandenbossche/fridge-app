@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import { recipesRouter } from "./routes/recipes";
 
 // require thr express module
 const app = express();
@@ -8,6 +9,7 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
+app.use("/", recipesRouter);
 
 const port = 3000;
 
