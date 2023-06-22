@@ -24,9 +24,9 @@ export function IngredientNav () {
 
 
   return (
-    <div className="hero">
+    <div className="ingredients-nav">
         <ul>
-            <li onClick={() => scrollToSection(proteins)} className="link">Proteins</li>
+            <li className="link">Proteins</li>
             <li className="link">Fruit</li>
             <li className="link">Carbs</li>
             <li className="link">Seasonings</li>
