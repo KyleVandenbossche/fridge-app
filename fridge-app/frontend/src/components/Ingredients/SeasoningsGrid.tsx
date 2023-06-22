@@ -51,7 +51,7 @@ export function SeasoningsGrid () {
     <div className="container">
       <div className="row">
         {seasonings.map((seasoning, index) => (
-          <div className="col-md-4" key={index}>
+          <div className="col-lg-3 col-md-4 col-sm-6 col-6" key={index}>
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title">{seasoning}</h5>
