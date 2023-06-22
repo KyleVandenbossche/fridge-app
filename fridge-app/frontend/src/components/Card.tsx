@@ -1,39 +1,65 @@
-import { Ingredients } from "../models/Ingredients";
+import { useEffect, useState } from "react"
+import Recipe from "../models/Ingredients"
+import './Card.css'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
-export function Card(props: {ingredient: Ingredients}){
 
+export function Card(){
+
+    const ingredients = [
+        { name: "Flour", quantity: 1, measurement: "cup" },
+        { name: "Sugar", quantity: 2, measurement: "tablespoons" },
+        { name: "Salt", quantity: 0.5, measurement: "teaspoon" },
+    ];
+
+
+
+
+    // const [ingredient, newIngredient] = useState<Recipe>();
+
+    // useEffect(() => {
+    //     getIngredient(+id!).then(data => setIngredient(data))
+    // })
+
+
+  
     return(
-        <div className="card-container">
-            <div className="card"> 
-                <div className="card_body">
-                    <h2 className="card_title">Chicken</h2>
-                    <p className="card_description">Chicken is a protein</p>
-                </div>
-                <button className="card_btn">View Nutrition</button>
-            </div>
-            <div className="card2">
-                <div className="card_body">
-                    <h2 className="card_title">Chicken</h2>
-                    <p className="card_description">Chicken is a protein</p>
-                </div>
-                <button className="card_btn">View Nutrition</button>
-            </div>
-            <div className="card3">
-                <div className="card_body">
-                    <h2 className="card_title">Chicken</h2>
-                    <p className="card_description">Chicken is a protein</p>
-                </div>
-                <button className="card_btn">View Nutrition</button>
-            </div>
-            <div className="card4">
-                <div className="card_body">
-                    <h2 className="card_title">Chicken</h2>
-                    <p className="card_description">Chicken is a protein</p>
-                </div>
-                <button className="card_btn">View Nutrition</button>
-            </div>
+        // <div className="grid">
+        // <div className="row">
 
-        </div>
+        // {ingredients.map((ingredient, index) => (
+        //   <div className="col-md-4" key={index}>
+        //     <h3>{ingredient.name}</h3>
+        //     <p>
+        //       Quantity: {ingredient.quantity} {ingredient.measurement}
+        //     </p>
+        //   </div>
+        // ))}
+        //   </div>
+        //   </div>
+
+        <div>
+        <Container>
+      <Row>
+        <Col>
+        xs=6 md=4
+        </Col>
+        <Col xs={6} md={4}>
+          xs=6 md=4
+        </Col>
+        <Col xs={6} md={4}>
+          xs=6 md=4
+        </Col>
+      </Row>
+      
+      </Container>
+      </div>
+
+
     )
-}
+        }
+
+    

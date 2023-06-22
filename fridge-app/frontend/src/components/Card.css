@@ -1,0 +1,14 @@
+.ingredient-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: lightblue;
+  }
+  
+  .ingredient-card h3 {
+    margin-top: 0;
+  }
+  
+  .ingredient-card p {
+    margin-bottom: 10;
+  }
