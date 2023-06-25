@@ -49,6 +49,7 @@ export function FruitGrid () {
 
 
   return (
+    <>
     <div className="container">
       <div className="row">
         {fruits.map((fruit, index) => (
@@ -62,6 +63,7 @@ export function FruitGrid () {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

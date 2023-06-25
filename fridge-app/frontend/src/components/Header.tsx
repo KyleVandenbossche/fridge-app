@@ -1,6 +1,6 @@
 
 
-export function Header () {
+export function Header ({user} : {user: string} ) {
 
     return(
         <div className="header-container">
@@ -31,8 +31,10 @@ export function Header () {
         </div>
         <div className="contacts-container">
         <h1 className='logo'>Fridge to Table</h1>
+        <h3>Welcome {user}</h3>
       </div>
       </div>
+      
     )
 
 }

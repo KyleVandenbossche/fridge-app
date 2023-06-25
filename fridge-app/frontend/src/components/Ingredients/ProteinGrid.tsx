@@ -50,6 +50,7 @@ export function ProteinGrid () {
 
 
   return (
+    <>
     <div className="protein-container">
     <div className="container">
       <div className="row">
@@ -65,6 +66,7 @@ export function ProteinGrid () {
       </div>
     </div>
     </div>
+    </>
   );
 };
 

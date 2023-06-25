@@ -50,7 +50,8 @@ export function CarbGrid () {
 
 
   return (
-    <div className="container">
+    <>   
+     <div className="container">
       <div className="row">
         {carbohydrates.map((carbohydrate, index) => (
           <div className="col-lg-3 col-md-4 col-sm-6 col-6" key={index}>
@@ -63,6 +64,8 @@ export function CarbGrid () {
         ))}
       </div>
     </div>
+    </>
+
   );
 };
 

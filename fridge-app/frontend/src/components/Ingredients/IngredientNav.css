@@ -2,11 +2,20 @@
 /* DESKTOP DISPLAY */
 /* DESKTOP DISPLAY */
 /* DESKTOP DISPLAY */
+
+.text-nav-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+
+}
+
+
 .link{
     display: inline;
-    padding: 20px 20px 20px;
     margin: 30px;
-    font-size: 32px;
+    font-size: 26px;
   }
 
   .picture-link{
@@ -15,6 +24,36 @@
 /* DESKTOP DISPLAY */
 /* DESKTOP DISPLAY */
 /* DESKTOP DISPLAY */
+
+
+
+
+/* MID-SIZE DISPLAY */
+/* MID-SIZE DISPLAY */
+/* MID-SIZE DISPLAY */
+@media (max-width: 1024px) {
+  .text-nav-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+
+}
+
+
+.link{
+    display: inline;
+    margin: 30px;
+    font-size: 18px;
+  }
+
+  .picture-link{
+    display: none;
+  }
+}
+/* MID-SIZE DISPLAY */
+/* MID-SIZE DISPLAY */
+/* MID-SIZE DISPLAY */
 
 
 
@@ -31,7 +70,7 @@
     }
 
 
-    .icon-container{
+    .icon-nav-container{
         position: fixed;
         left: 0;
         bottom: 0;
@@ -41,12 +80,15 @@
         z-index: 6;
         background-color: white;
         border-top: 3px solid black;
+        display: flex;
+        justify-content: space-evenly;
         
     }
 
     .picture-link{
         display: inline;
         padding: 10px;
+        /* border: 1px solid black; */
     
     }
 

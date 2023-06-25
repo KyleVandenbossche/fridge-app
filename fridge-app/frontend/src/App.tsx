@@ -9,20 +9,27 @@ import FruitGrid from './components/Ingredients/FruitGrid';
 import CarbGrid from './components/Ingredients/CarbGrid';
 import SeasoningsGrid from './components/Ingredients/SeasoningsGrid';
 import { IngredientNav } from './components/Ingredients/IngredientNav';
+import { Route, Router, Routes } from 'react-router-dom';
+import VegetableGrid from './components/Ingredients/VegetableGrid';
 
 
 // 
 function App() {
   return (
     <div className="App">
-      <Header />
-
+      
+      <Header user={"Kyle"} />
       <IngredientNav />
+      {/* check if signed in true/false */}
 
-      <ProteinGrid />
-      <FruitGrid />
-      <CarbGrid />
-      <SeasoningsGrid />
+    <Routes>
+      <Route path ="/proteins" element={<ProteinGrid />} />
+      <Route path ="/fruits" element={<FruitGrid />} />
+      <Route path ="/carbohydrates" element={<CarbGrid />} />
+      <Route path ="/vegetables" element={<VegetableGrid />} />
+      <Route path ="/seasonings" element={<SeasoningsGrid />} />
+    </Routes>
+
 
       
     </div>

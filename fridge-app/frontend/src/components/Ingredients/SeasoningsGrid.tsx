@@ -48,6 +48,7 @@ export function SeasoningsGrid () {
 
 
   return (
+    <>
     <div className="container">
       <div className="row">
         {seasonings.map((seasoning, index) => (
@@ -61,6 +62,7 @@ export function SeasoningsGrid () {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
