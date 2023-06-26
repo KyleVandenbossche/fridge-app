@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 
 
@@ -48,6 +49,19 @@ export function CarbGrid () {
     ];
 
 
+    
+  // usestate for fridge
+
+  const [ingredients, setIngredients] = useState(['']);
+
+  // function to add the ingredient to the fridge
+
+  function handleIngredients(ingredient: string){
+    setIngredients([...ingredients, ingredient])
+  }
+
+
+
 
   return (
     <>   
@@ -58,8 +72,15 @@ export function CarbGrid () {
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title">{carbohydrate}</h5>
+                <button key={index} onClick={() => handleIngredients(carbohydrate)}>Add to Fridge</button>
+
               </div>
             </div>
+            <ol>
+                  {
+                    ingredients.map((ingredient,i) => <li key={i}>{ingredient}</li>)
+                  }
+                </ol>
           </div>
         ))}
       </div>

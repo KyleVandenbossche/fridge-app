@@ -16,7 +16,9 @@
     display: inline;
     margin: 30px;
     font-size: 26px;
+    text-decoration: none;
   }
+
 
   .picture-link{
     display: none;

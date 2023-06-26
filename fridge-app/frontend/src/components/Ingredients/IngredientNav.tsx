@@ -17,6 +17,8 @@ export function IngredientNav () {
     <div className="ingredients-nav">
         <ul>
 
+        {/* TEXT AT THE TOP - NAV BAR */}
+
             <div className="text-nav-container">
                 <li className="link"><button className="protein-button"><Link to ='./proteins'>Proteins</Link></button></li>
                 <li className="link"><button className="fruit-button"><Link to ='./fruits'>Fruit</Link></button></li>
@@ -25,6 +27,12 @@ export function IngredientNav () {
                 <li className="link"><button className="seasonings-button"><Link to ='./seasonings'>Seasonings</Link></button></li>
             </div>    
 
+        {/* TEXT AT THE TOP - NAV BAR */}
+
+
+
+
+        {/* PICTURES AT THE BOTTOM - NAV BAR */}
 
             <div className="icon-nav-container">
                 <li className="picture-link"><Link to ='./proteins'><img src={ require('./PicturesNav/Proteins.PNG')} height="50" /></Link></li>
@@ -33,6 +41,8 @@ export function IngredientNav () {
                 <li className="picture-link"><Link to ='./seasonings'><img src={ require('./PicturesNav/Seasonings.PNG')} height="50" /></Link></li>
                 <li className="picture-link"><Link to ='./vegetables'><img src={ require('./PicturesNav/Vegetables.PNG')} height="50" /></Link></li>
             </div>
+
+        {/* PICTURES AT THE BOTTOM - NAV BAR */}
 
         </ul>
 
