@@ -1,15 +1,14 @@
+import * as functions from "firebase-functions";
 import express from "express";
-import dotenv from "dotenv";
 import axios from "axios";
-dotenv.config();
 
-const appid: string = process.env.APPID || "";
-const appkey: string = process.env.APPKEY || "";
-const userId: string = process.env.USERID || "";
+const appid: string = functions.config().app.id;
+const appkey: string = functions.config().app.key;
+const userId: string = functions.config().user.id;
 
 export const recipesRouter = express.Router();
 
-recipesRouter.get("/", async function (req, res) {
+recipesRouter.get("/recipes", async function (req, res) {
   let ingredients = req.query.ingredients;
   let user = req.query.user;
   let recipeURL = `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredients}&app_id=${appid}&app_key=${appkey}&mealType=Dinner&dishType=Main%20course&random=true&field=uri&field=image&field=source&field=url&field=shareAs&field=ingredientLines&field=ingredients&field=calories&field=totalTime`;
