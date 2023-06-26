@@ -2,17 +2,11 @@ import express from "express";
 import { getClient } from "../db";
 import { ObjectId } from "mongodb";
 import UserFridge from "../models/UserFridge";
-import * as functions from "firebase-functions";
 const collection = "fridge";
-const userId: string = functions.config().user.id;
 
 export const fridgeRouter = express.Router();
 
 fridgeRouter.get("/fridge/:id", async (req, res) => {
-  let user = req.query.user;
-  if (user !== userId) {
-    res.status(403).send("Please Include a user parameter");
-  }
   if (ObjectId.isValid(req.params.id) === false) {
     res.status(400).end();
   } else {
