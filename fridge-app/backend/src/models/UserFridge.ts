@@ -1,5 +1,5 @@
 export default interface UserFridge {
   id?: number;
-  email: string;
+  userId: string;
   fridgeContents: string[];
 }
