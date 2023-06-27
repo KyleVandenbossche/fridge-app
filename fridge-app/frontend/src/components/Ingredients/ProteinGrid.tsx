@@ -1,8 +1,84 @@
+import { useState } from "react"
+
+export function ProteinGrid() {
+  const proteins: string[] = [
+    'Chicken',
+    'Beef',
+    'Salmon',
+    'Pork',
+    'Eggs',
+    'Lamb',
+    'Shrimp',
+    'Turkey',
+    'Bacon',
+    'Ham',
+    'Chicken',
+    'Beef',
+    'Salmon',
+    'Pork',
+    'Eggs',
+    'Lamb',
+    'Shrimp',
+    'Turkey',
+    'Bacon',
+    'Ham',
+    'Chicken',
+    'Beef',
+    'Salmon',
+    'Pork',
+    'Eggs',
+    'Lamb',
+    'Shrimp',
+    'Turkey',
+    'Bacon',
+    'Ham',
+    'Chicken',
+    'Beef',
+    'Salmon',
+    'Pork',
+    'Eggs',
+    'Lamb',
+    'Shrimp',
+    'Turkey',
+    'Bacon',
+    'Ham',
+  ];
+
+  
+  const [ingredients, setIngredients] = useState<string[]>([]);
+
+  function handleIngredients(ingredient: string) {
+    setIngredients([...ingredients, ingredient]);
+  }
+
+  return (
+    <div className="container">
+      <div className="row">
+        {proteins.map((protein, index) => (
+          <div className="protein-item" key={index}>
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">{protein}</h5>
+                <button onClick={() => handleIngredients(protein)}>Add to Fridge</button>
+                <ol>
+                  {ingredients.map((ingredient, i) => (
+                    <li key={i}>{ingredient}</li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default ProteinGrid;
 
 
 
-
-export function ProteinGrid () {
+/*export function ProteinGrid () {
 
     const proteins: string[] = [
         'Chicken', 
@@ -70,4 +146,4 @@ export function ProteinGrid () {
   );
 };
 
-export default ProteinGrid;
+export default ProteinGrid;*/

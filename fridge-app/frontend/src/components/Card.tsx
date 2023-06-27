@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import Recipe from "../models/Ingredients"
 import './Card.css'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+//import Container from 'react-bootstrap/Container';
+//import Row from 'react-bootstrap/Row';
+//import Col from 'react-bootstrap/Col';
 
 
 
@@ -26,7 +26,7 @@ export function Card(){
 
 
   
-    return(
+   // return(
         // <div className="grid">
         // <div className="row">
 
@@ -41,7 +41,7 @@ export function Card(){
         //   </div>
         //   </div>
 
-        <div>
+       /*<div>
         <Container>
       <Row>
         <Col>
@@ -56,10 +56,10 @@ export function Card(){
       </Row>
       
       </Container>
-      </div>
+      </div>*/
 
 
-    )
+   // )
  }
 
     

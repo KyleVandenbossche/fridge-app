@@ -1,5 +1,84 @@
 import { useState } from "react";
 
+export function FruitGrid() {
+  const fruits: string[] = [
+    'Apple',
+    'Banana',
+    'Orange',
+    'Mango',
+    'Grapes',
+    'Watermelon',
+    'Pineapple',
+    'Strawberry',
+    'Kiwi',
+    'Peach',
+    'Apple',
+    'Banana',
+    'Orange',
+    'Mango',
+    'Grapes',
+    'Watermelon',
+    'Pineapple',
+    'Strawberry',
+    'Kiwi',
+    'Peach',
+    'Apple',
+    'Banana',
+    'Orange',
+    'Mango',
+    'Grapes',
+    'Watermelon',
+    'Pineapple',
+    'Strawberry',
+    'Kiwi',
+    'Peach',
+    'Apple',
+    'Banana',
+    'Orange',
+    'Mango',
+    'Grapes',
+    'Watermelon',
+    'Pineapple',
+    'Strawberry',
+    'Kiwi',
+    'Peach',
+  ];
+
+  const [ingredients, setIngredients] = useState<string[]>([]);
+
+  function handleIngredients(ingredient: string) {
+    setIngredients([...ingredients, ingredient]);
+  }
+
+  return (
+    <div className="container">
+      <div className="row">
+        {fruits.map((fruit, index) => (
+          <div className="fruit-item" key={index}>
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">{fruit}</h5>
+                <button onClick={() => handleIngredients(fruit)}>Add to Fridge</button>
+                <ol>
+                  {ingredients.map((ingredient, i) => (
+                    <li key={i}>{ingredient}</li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default FruitGrid;
+
+
+
+/*import { useState } from "react";
+
 
 
 export function FruitGrid () {
@@ -86,4 +165,4 @@ export function FruitGrid () {
   );
 };
 
-export default FruitGrid;
+export default FruitGrid;*/
