@@ -1,3 +1,4 @@
+
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
@@ -12,6 +13,8 @@ import { IngredientNav } from "./components/Ingredients/IngredientNav";
 import { Route, Router, Routes } from "react-router-dom";
 import VegetableGrid from "./components/Ingredients/VegetableGrid";
 import AuthContextProvider from "./context/AuthContextProvider";
+import SignInForm from './SignInForm';
+
 
 //
 function App() {
@@ -20,7 +23,9 @@ function App() {
       <AuthContextProvider>
         <Header user={"Kyle"} />
         <IngredientNav />
+        <SignInForm />
         {/* check if signed in true/false */}
+
 
         <Routes>
           <Route path="/proteins" element={<ProteinGrid />} />
