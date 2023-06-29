@@ -11,6 +11,7 @@ import SeasoningsGrid from './components/Ingredients/SeasoningsGrid';
 import { IngredientNav } from './components/Ingredients/IngredientNav';
 import { Route, Router, Routes } from 'react-router-dom';
 import VegetableGrid from './components/Ingredients/VegetableGrid';
+import SignInForm from './SignInForm';
 
 
 // 
@@ -20,6 +21,7 @@ function App() {
       
       <Header user={"Kyle"} />
       <IngredientNav />
+      <SignInForm />
       {/* check if signed in true/false */}
 
     <Routes>
