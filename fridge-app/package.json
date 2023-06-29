@@ -1,5 +1,8 @@
 {
   "name": "fridge-app",
   "version": "0.1.0",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "firebase": "^9.23.0"
+  }
 }
