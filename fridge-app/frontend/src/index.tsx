@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
 import AuthContextProvider from "./context/AuthContextProvider";
+import { FridgeProvider } from "./context/FridgeContextProvider";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,9 +14,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <AuthContextProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <FridgeProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </FridgeProvider>
     </AuthContextProvider>
   </React.StrictMode>
 );
