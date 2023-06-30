@@ -1,80 +1,80 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { FridgeContext } from "../../context/FridgeContextProvider";
 
-export function SeasoningsGrid () {
+export function SeasoningsGrid() {
+  const { fridge, addFridgeItem } = useContext(FridgeContext);
 
   const seasonings: string[] = [
-      'Pepper', 
-      'Salt', 
-      'Paprika', 
-      'Garlic Powder', 
-      'Onion Powder', 
-      'Parsley', 
-      'Thyme', 
-      'Mint', 
-      'Cilantro', 
-      'Crushed Red Pepper',
-      'Pepper', 
-      'Salt', 
-      'Paprika', 
-      'Garlic Powder', 
-      'Onion Powder', 
-      'Parsley', 
-      'Thyme', 
-      'Mint', 
-      'Cilantro', 
-      'Crushed Red Pepper',
-      'Pepper', 
-      'Salt', 
-      'Paprika', 
-      'Garlic Powder', 
-      'Onion Powder', 
-      'Parsley', 
-      'Thyme', 
-      'Mint', 
-      'Cilantro', 
-      'Crushed Red Pepper',
-      'Pepper', 
-      'Salt', 
-      'Paprika', 
-      'Garlic Powder', 
-      'Onion Powder', 
-      'Parsley', 
-      'Thyme', 
-      'Mint', 
-      'Cilantro', 
-      'Crushed Red Pepper'
+    "Pepper",
+    "Salt",
+    "Paprika",
+    "Garlic Powder",
+    "Onion Powder",
+    "Parsley",
+    "Thyme",
+    "Mint",
+    "Cilantro",
+    "Crushed Red Pepper",
+    "Pepper",
+    "Salt",
+    "Paprika",
+    "Garlic Powder",
+    "Onion Powder",
+    "Parsley",
+    "Thyme",
+    "Mint",
+    "Cilantro",
+    "Crushed Red Pepper",
+    "Pepper",
+    "Salt",
+    "Paprika",
+    "Garlic Powder",
+    "Onion Powder",
+    "Parsley",
+    "Thyme",
+    "Mint",
+    "Cilantro",
+    "Crushed Red Pepper",
+    "Pepper",
+    "Salt",
+    "Paprika",
+    "Garlic Powder",
+    "Onion Powder",
+    "Parsley",
+    "Thyme",
+    "Mint",
+    "Cilantro",
+    "Crushed Red Pepper",
   ];
-  const [ingredients, setIngredients] = useState<string[]>([]);
 
   function handleIngredients(ingredient: string) {
-    setIngredients([...ingredients, ingredient]);
+    addFridgeItem(ingredient);
   }
 
-
-return (
-  
- <div className="container">
+  return (
+    <div className="container">
       <div className="row">
         {seasonings.map((seasoning, index) => (
           <div className="seasoning-item" key={index}>
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title">{seasoning}</h5>
-                <button onClick={() => handleIngredients(seasoning)}>Add to Fridge</button>
+                <button onClick={() => handleIngredients(seasoning)}>
+                  Add to Fridge
+                </button>
                 <ol>
-                  {ingredients.map((ingredient, i) => (
+                  {fridge.map((ingredient, i) => (
                     <li key={i}>{ingredient}</li>
                   ))}
                 </ol>
               </div>
             </div>
           </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
-
-);
-};
+  );
+}
 
 export default SeasoningsGrid;
 

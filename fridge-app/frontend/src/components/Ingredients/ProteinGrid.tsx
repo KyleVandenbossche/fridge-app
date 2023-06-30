@@ -1,54 +1,53 @@
-import { useState } from "react"
+import { useContext } from "react";
+import { FridgeContext } from "../../context/FridgeContextProvider";
 
 export function ProteinGrid() {
+  const { fridge, addFridgeItem } = useContext(FridgeContext);
   const proteins: string[] = [
-    'Chicken',
-    'Beef',
-    'Salmon',
-    'Pork',
-    'Eggs',
-    'Lamb',
-    'Shrimp',
-    'Turkey',
-    'Bacon',
-    'Ham',
-    'Chicken',
-    'Beef',
-    'Salmon',
-    'Pork',
-    'Eggs',
-    'Lamb',
-    'Shrimp',
-    'Turkey',
-    'Bacon',
-    'Ham',
-    'Chicken',
-    'Beef',
-    'Salmon',
-    'Pork',
-    'Eggs',
-    'Lamb',
-    'Shrimp',
-    'Turkey',
-    'Bacon',
-    'Ham',
-    'Chicken',
-    'Beef',
-    'Salmon',
-    'Pork',
-    'Eggs',
-    'Lamb',
-    'Shrimp',
-    'Turkey',
-    'Bacon',
-    'Ham',
+    "Chicken",
+    "Beef",
+    "Salmon",
+    "Pork",
+    "Eggs",
+    "Lamb",
+    "Shrimp",
+    "Turkey",
+    "Bacon",
+    "Ham",
+    "Chicken",
+    "Beef",
+    "Salmon",
+    "Pork",
+    "Eggs",
+    "Lamb",
+    "Shrimp",
+    "Turkey",
+    "Bacon",
+    "Ham",
+    "Chicken",
+    "Beef",
+    "Salmon",
+    "Pork",
+    "Eggs",
+    "Lamb",
+    "Shrimp",
+    "Turkey",
+    "Bacon",
+    "Ham",
+    "Chicken",
+    "Beef",
+    "Salmon",
+    "Pork",
+    "Eggs",
+    "Lamb",
+    "Shrimp",
+    "Turkey",
+    "Bacon",
+    "Ham",
   ];
 
-  
-  const [ingredients, setIngredients] = useState<string[]>([]);
-
   function handleIngredients(ingredient: string) {
-    setIngredients([...ingredients, ingredient]);
+    addFridgeItem(ingredient);
   }
 
   return (
@@ -59,9 +58,11 @@ export function ProteinGrid() {
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title">{protein}</h5>
-                <button onClick={() => handleIngredients(protein)}>Add to Fridge</button>
+                <button onClick={() => handleIngredients(protein)}>
+                  Add to Fridge
+                </button>
                 <ol>
-                  {ingredients.map((ingredient, i) => (
+                  {fridge.map((ingredient, i) => (
                     <li key={i}>{ingredient}</li>
                   ))}
                 </ol>
@@ -75,8 +76,6 @@ export function ProteinGrid() {
 }
 
 export default ProteinGrid;
-
-
 
 /*export function ProteinGrid () {
 
