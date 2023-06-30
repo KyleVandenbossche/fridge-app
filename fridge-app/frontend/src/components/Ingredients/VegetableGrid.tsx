@@ -1,83 +1,83 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { FridgeContext } from "../../context/FridgeContextProvider";
 
-export function VegetableGrid () {
+export function VegetableGrid() {
+  const { fridge, addFridgeItem } = useContext(FridgeContext);
 
   const vegetables: string[] = [
-      'Carrot',
-      'Broccoli',
-      'Tomato',
-      'Cabbage',
-      'Spinach',
-      'Bell Pepper',
-      'Cauliflower',
-      'Zucchini',
-      'Eggplant',
-      'Green Beans',
-      'Lettuce',
-      'Radish',
-      'Onion',
-      'Garlic',
-      'Potato',
-      'Sweet Potato',
-      'Beetroot',
-      'Cucumber',
-      'Asparagus',
-      'Kale',
-      'Carrot',
-      'Broccoli',
-      'Tomato',
-      'Cabbage',
-      'Spinach',
-      'Bell Pepper',
-      'Cauliflower',
-      'Zucchini',
-      'Eggplant',
-      'Green Beans',
-      'Lettuce',
-      'Radish',
-      'Onion',
-      'Garlic',
-      'Potato',
-      'Sweet Potato',
-      'Beetroot',
-      'Cucumber',
-      'Asparagus',
-      'Kale'
+    "Carrot",
+    "Broccoli",
+    "Tomato",
+    "Cabbage",
+    "Spinach",
+    "Bell Pepper",
+    "Cauliflower",
+    "Zucchini",
+    "Eggplant",
+    "Green Beans",
+    "Lettuce",
+    "Radish",
+    "Onion",
+    "Garlic",
+    "Potato",
+    "Sweet Potato",
+    "Beetroot",
+    "Cucumber",
+    "Asparagus",
+    "Kale",
+    "Carrot",
+    "Broccoli",
+    "Tomato",
+    "Cabbage",
+    "Spinach",
+    "Bell Pepper",
+    "Cauliflower",
+    "Zucchini",
+    "Eggplant",
+    "Green Beans",
+    "Lettuce",
+    "Radish",
+    "Onion",
+    "Garlic",
+    "Potato",
+    "Sweet Potato",
+    "Beetroot",
+    "Cucumber",
+    "Asparagus",
+    "Kale",
   ];
-  const [ingredients, setIngredients] = useState<string[]>([]);
-
   function handleIngredients(ingredient: string) {
-    setIngredients([...ingredients, ingredient]);
+    addFridgeItem(ingredient);
   }
 
-
-return (
-  <>
- <div className="container">
-      <div className="row">
-        {vegetables.map((vegetable, index) => (
-          <div className="vegetable-item" key={index}>
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">{vegetable}</h5>
-                <button onClick={() => handleIngredients(vegetable)}>Add to Fridge</button>
-                <ol>
-                  {ingredients.map((ingredient, i) => (
-                    <li key={i}>{ingredient}</li>
-                  ))}
-                </ol>
+  return (
+    <>
+      <div className="container">
+        <div className="row">
+          {vegetables.map((vegetable, index) => (
+            <div className="vegetable-item" key={index}>
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">{vegetable}</h5>
+                  <button onClick={() => handleIngredients(vegetable)}>
+                    Add to Fridge
+                  </button>
+                  <ol>
+                    {fridge.map((ingredient, i) => (
+                      <li key={i}>{ingredient}</li>
+                    ))}
+                  </ol>
+                </div>
               </div>
             </div>
-          </div>
-      ))}
-    </div>
-  </div>
-  </>
-);
-};
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
 
 export default VegetableGrid;
-
 
 /*export function VegetableGrid () {
 

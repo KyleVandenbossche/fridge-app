@@ -1,53 +1,53 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { FridgeContext } from "../../context/FridgeContextProvider";
 
 export function FruitGrid() {
+  const { fridge, addFridgeItem } = useContext(FridgeContext);
   const fruits: string[] = [
-    'Apple',
-    'Banana',
-    'Orange',
-    'Mango',
-    'Grapes',
-    'Watermelon',
-    'Pineapple',
-    'Strawberry',
-    'Kiwi',
-    'Peach',
-    'Apple',
-    'Banana',
-    'Orange',
-    'Mango',
-    'Grapes',
-    'Watermelon',
-    'Pineapple',
-    'Strawberry',
-    'Kiwi',
-    'Peach',
-    'Apple',
-    'Banana',
-    'Orange',
-    'Mango',
-    'Grapes',
-    'Watermelon',
-    'Pineapple',
-    'Strawberry',
-    'Kiwi',
-    'Peach',
-    'Apple',
-    'Banana',
-    'Orange',
-    'Mango',
-    'Grapes',
-    'Watermelon',
-    'Pineapple',
-    'Strawberry',
-    'Kiwi',
-    'Peach',
+    "Apple",
+    "Banana",
+    "Orange",
+    "Mango",
+    "Grapes",
+    "Watermelon",
+    "Pineapple",
+    "Strawberry",
+    "Kiwi",
+    "Peach",
+    "Apple",
+    "Banana",
+    "Orange",
+    "Mango",
+    "Grapes",
+    "Watermelon",
+    "Pineapple",
+    "Strawberry",
+    "Kiwi",
+    "Peach",
+    "Apple",
+    "Banana",
+    "Orange",
+    "Mango",
+    "Grapes",
+    "Watermelon",
+    "Pineapple",
+    "Strawberry",
+    "Kiwi",
+    "Peach",
+    "Apple",
+    "Banana",
+    "Orange",
+    "Mango",
+    "Grapes",
+    "Watermelon",
+    "Pineapple",
+    "Strawberry",
+    "Kiwi",
+    "Peach",
   ];
 
-  const [ingredients, setIngredients] = useState<string[]>([]);
-
   function handleIngredients(ingredient: string) {
-    setIngredients([...ingredients, ingredient]);
+    addFridgeItem(ingredient);
   }
 
   return (
@@ -58,9 +58,11 @@ export function FruitGrid() {
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title">{fruit}</h5>
-                <button onClick={() => handleIngredients(fruit)}>Add to Fridge</button>
+                <button onClick={() => handleIngredients(fruit)}>
+                  Add to Fridge
+                </button>
                 <ol>
-                  {ingredients.map((ingredient, i) => (
+                  {fridge.map((ingredient, i) => (
                     <li key={i}>{ingredient}</li>
                   ))}
                 </ol>
@@ -74,8 +76,6 @@ export function FruitGrid() {
 }
 
 export default FruitGrid;
-
-
 
 /*import { useState } from "react";
 
