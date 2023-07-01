@@ -10,6 +10,7 @@ import { IngredientNav } from "./components/Ingredients/IngredientNav";
 import { Route, Router, Routes } from "react-router-dom";
 import VegetableGrid from "./components/Ingredients/VegetableGrid";
 import RecipePage from "./components/RecipePage";
+import FridgePage from "./components/FridgePage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/vegetables" element={<VegetableGrid />} />
         <Route path="/seasonings" element={<SeasoningsGrid />} />
         <Route path="/recipe" element={<RecipePage />} />
+        <Route path="/fridge" element={<FridgePage />} />
       </Routes>
     </div>
   );
