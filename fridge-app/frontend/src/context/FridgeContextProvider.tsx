@@ -11,6 +11,7 @@ export const FridgeContext = React.createContext<FridgeContextType>({
   fridge: [],
   getFridge: (uid) => {},
   addFridgeItem: (ingredient) => {},
+  removeFridgeItem: (index) => {},
 });
 
 export function FridgeProvider({ children }: Props) {
@@ -26,8 +27,14 @@ export function FridgeProvider({ children }: Props) {
     addToFridge([...fridge!, item]);
   };
 
+  const removeFridgeItem = (index: number) => {
+    addToFridge(fridge.filter((_, i) => i !== index));
+  };
+
   return (
-    <FridgeContext.Provider value={{ fridge, getFridge, addFridgeItem }}>
+    <FridgeContext.Provider
+      value={{ fridge, getFridge, addFridgeItem, removeFridgeItem }}
+    >
       {children}
     </FridgeContext.Provider>
   );
