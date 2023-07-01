@@ -9,6 +9,7 @@ import SeasoningsGrid from "./components/Ingredients/SeasoningsGrid";
 import { IngredientNav } from "./components/Ingredients/IngredientNav";
 import { Route, Router, Routes } from "react-router-dom";
 import VegetableGrid from "./components/Ingredients/VegetableGrid";
+import RecipePage from "./components/RecipePage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/carbohydrates" element={<CarbGrid />} />
         <Route path="/vegetables" element={<VegetableGrid />} />
         <Route path="/seasonings" element={<SeasoningsGrid />} />
+        <Route path="/recipe" element={<RecipePage />} />
       </Routes>
     </div>
   );

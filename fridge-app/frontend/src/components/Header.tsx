@@ -1,6 +1,7 @@
 import { signInWithGoogle, signOut } from "../firebaseConfig";
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const { user } = useContext(AuthContext);
@@ -24,9 +25,14 @@ export function Header() {
             </a>
           </li>
           <li>
-            <a className="menu__item" href="#">
+            <Link to="/recipe" className="menu__item">
               Find Recipe
-            </a>
+            </Link>
+          </li>
+          <li>
+            <Link to="/fridge" className="menu__item">
+              Manage your Fridge
+            </Link>
           </li>
         </ul>
       </div>
