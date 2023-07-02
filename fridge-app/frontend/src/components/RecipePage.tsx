@@ -1,24 +1,34 @@
 import { useContext, useState } from "react";
 import { FridgeContext } from "../context/FridgeContextProvider";
 import "./recipepage.css";
+import { getRecipes } from "../services/RecipeService";
 
 const RecipePage = () => {
   const { fridge } = useContext(FridgeContext);
   const [table, addToTable] = useState<string[]>([]);
+  const [recipes, updateRecipes] = useState<any>([]);
 
   const tableAdd = (ingredient: string) => {
     addToTable([...table!, ingredient]);
   };
 
-  const getRecipes = () => {
+  const getTitle = (url: any) => {
+    let full = url.split("/");
+    let title = full.slice(-1);
+    return title;
+  };
+
+  const getUserRecipes = () => {
     const searchIngredients = table.join("%20");
     console.log(searchIngredients);
+    getRecipes(searchIngredients).then((data) => updateRecipes(data.hits));
+    console.log(recipes);
   };
   return (
     <>
       <div className="recipePageContainersContainer">
         <div className="fridgeContainer">
-          <h2 className='fridge-text'>Fridge</h2>
+          <h2 className="fridge-text">Fridge</h2>
           {fridge.length === 0 ? (
             <div>Please Add Items to your Fridge</div>
           ) : (
@@ -36,9 +46,11 @@ const RecipePage = () => {
         <div className="tableContainer">
           <h2 className="table-text">Table</h2>
           {table.length === 0 ? (
-            <div className='add-items'>Please Add Items to your Table to search for recipes</div>
+            <div className="add-items">
+              Please Add Items to your Table to search for recipes
+            </div>
           ) : (
-            <ul className='table-ingredients'>
+            <ul className="table-ingredients">
               {table.map((ingredient: string, i: number) => (
                 <li key={i}>{ingredient}</li>
               ))}
@@ -48,12 +60,31 @@ const RecipePage = () => {
         </div>
         <div className="recipesearch">
           {table.length > 0 ? (
-            <button onClick={() => getRecipes()}>Search for Recipes</button>
+            <button onClick={() => getUserRecipes()}>Search for Recipes</button>
           ) : (
             <div></div>
           )}
         </div>
+        <div className="userrecipes">
+          {recipes.length === 0 ? (
+            <div>No recipes searched for yet</div>
+          ) : (
+            <ul>
+              {recipes.map((recipe: any, i: number) => (
+                <li key={i}>
+                  <a href={recipe.recipe.url}>{getTitle(recipe.recipe.url)}</a>
+                  <p>{recipe.recipe.recipeLines}</p>
+                  <a href={recipe.recipe.url}>
+                    <img src={recipe.recipe.image} />
+                  </a>
+                  <p>Calories: {recipe.recipe.calories}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
+      {console.log(recipes)}
     </>
   );
 };
