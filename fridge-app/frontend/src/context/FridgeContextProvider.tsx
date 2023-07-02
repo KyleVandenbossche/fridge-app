@@ -1,7 +1,6 @@
 import React, { useEffect, useState, ReactNode, useContext } from "react";
 import { FridgeContextType } from "./FridgeContextModel";
 import AuthContext from "./AuthContext";
-import Fridge from "../models/Fridge";
 
 interface Props {
   children: ReactNode;
@@ -12,6 +11,7 @@ export const FridgeContext = React.createContext<FridgeContextType>({
   getFridge: (uid) => {},
   addFridgeItem: (ingredient) => {},
   removeFridgeItem: (index) => {},
+  createFridge: (uid) => {},
 });
 
 export function FridgeProvider({ children }: Props) {
@@ -31,9 +31,17 @@ export function FridgeProvider({ children }: Props) {
     addToFridge(fridge.filter((_, i) => i !== index));
   };
 
+  const createFridge = (userID: any) => {};
+
   return (
     <FridgeContext.Provider
-      value={{ fridge, getFridge, addFridgeItem, removeFridgeItem }}
+      value={{
+        fridge,
+        getFridge,
+        addFridgeItem,
+        removeFridgeItem,
+        createFridge,
+      }}
     >
       {children}
     </FridgeContext.Provider>
