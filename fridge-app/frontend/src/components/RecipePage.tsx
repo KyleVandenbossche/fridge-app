@@ -9,6 +9,11 @@ const RecipePage = () => {
   const tableAdd = (ingredient: string) => {
     addToTable([...table!, ingredient]);
   };
+
+  const getRecipes = () => {
+    const searchIngredients = table.join("%20");
+    console.log(searchIngredients);
+  };
   return (
     <>
       <div className="recipePageContainersContainer">
@@ -42,7 +47,11 @@ const RecipePage = () => {
           )}
         </div>
         <div className="recipesearch">
-          {table.length > 0 ? <button>Search for Recipes</button> : <div></div>}
+          {table.length > 0 ? (
+            <button onClick={() => getRecipes()}>Search for Recipes</button>
+          ) : (
+            <div></div>
+          )}
         </div>
       </div>
     </>
