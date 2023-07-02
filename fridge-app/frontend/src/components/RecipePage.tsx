@@ -18,7 +18,7 @@ const RecipePage = () => {
     <>
       <div className="recipePageContainersContainer">
         <div className="fridgeContainer">
-          <h2>Fridge</h2>
+          <h2 className='fridge-text'>Fridge</h2>
           {fridge.length === 0 ? (
             <div>Please Add Items to your Fridge</div>
           ) : (
@@ -34,11 +34,11 @@ const RecipePage = () => {
           )}
         </div>
         <div className="tableContainer">
-          <h2>Table</h2>
+          <h2 className="table-text">Table</h2>
           {table.length === 0 ? (
-            <div>Please Add Items to your Table to search for recipes</div>
+            <div className='add-items'>Please Add Items to your Table to search for recipes</div>
           ) : (
-            <ul>
+            <ul className='table-ingredients'>
               {table.map((ingredient: string, i: number) => (
                 <li key={i}>{ingredient}</li>
               ))}

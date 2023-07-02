@@ -41,11 +41,12 @@ export function Header() {
         {user ? (
           <div>
             Welcome {user?.displayName}{" "}
-            <button onClick={signOut}>Sign out</button>
+            <button className='sign-out-button' onClick={signOut}>Sign out</button>
           </div>
         ) : (
           <div>
-            <button onClick={signInWithGoogle}>Sign in with Google</button>
+            <button className='sign-in-button' onClick={signInWithGoogle}>Sign in with Google<span className="google-icon"></span></button>
+          
           </div>
         )}
       </div>

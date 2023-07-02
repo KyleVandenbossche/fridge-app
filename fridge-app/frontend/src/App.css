@@ -9,7 +9,6 @@ body {
   .header-container{
     border-bottom: #333 1px solid;
     padding: 15px;
-    background-color: rgb(214, 80, 80);
   }
 
   .logo{
@@ -57,42 +56,14 @@ body {
   }
   
   .card {
-    border: 1px solid red;
+
     width: 150px;
-    height: 150px;
+    height: 100%;
     margin: auto;
     text-align: center;
     border-radius: 15px;
 
   }
-  .card2 {
-    border: 1px solid red;
-    width: 150px;
-    height: 150px;
-    margin: auto;
-    text-align: center;
-    border-radius: 15px;
-
-  }
-  .card3 {
-    border: 1px solid red;
-    width: 150px;
-    height: 150px;
-    margin: auto;
-    text-align: center;
-    border-radius: 15px;
-
-  }
-  .card4 {
-    border: 1px solid red;
-    width: 150px;
-    height: 150px;
-    margin: auto;
-    text-align: center;
-    border-radius: 15px;
-
-  }
-
 
 
   .header-container{
@@ -112,12 +83,29 @@ body {
   .contacts-container{  
     /* border: 1px red solid; */
     margin-right: 50px;
-    background-color: rgb(243, 197, 160);
-   
-    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   
   }
   
+  .logo{
+    margin-left: 10px;
+  }
+
+  .sign-out-button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 4px 8px; /* Adjusted padding */
+    font-size: 12px; /* Adjusted font size */
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .sign-out-button:hover {
+    background-color: #c83d47;
+  }
   
   
   
@@ -159,7 +147,7 @@ body {
     display: block;
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 1px;
     background-color: #616161;
     transition-duration: .25s;
     
@@ -243,7 +231,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: rgb(214, 80, 80);
+    text-align: center;
+  }
+
+  h1{
+    margin: auto;
+
+    
   }
   
   .fruit-item,
@@ -253,10 +247,9 @@ body {
   .vegetable-item {
     flex-basis: calc(33.33% - 10px);
     margin-bottom: 20px;
-    background-color: rgb(243, 197, 160);
   }
   
-  .card {
+  .card, .fridge-ul, .fridge-li {
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -273,7 +266,6 @@ body {
     border: 1px solid #ccc;
     padding: 5px 10px;
     cursor: pointer;
-    background-color: rgb(243, 197, 160);
   }
   
   ol {
@@ -285,7 +277,7 @@ body {
   .seasoning-item,
   .carbs-item,
   .protein-item,
-  .vegetable-item {
+  .vegetable-item{
     flex-basis: calc(100% / 3);
   }
   
@@ -306,11 +298,96 @@ body {
     .carbs-item,
     .protein-item,
     .vegetable-item
+
     {
       flex-basis: 100%;
     }
+
+    
+
+
   }
 
   /* NAVBAR FOR INGREDIENTS */
   /* NAVBAR FOR INGREDIENTS */
   /* NAVBAR FOR INGREDIENTS */
+
+
+ul, li{
+  align-items: center;
+  margin-bottom: auto;
+
+}
+
+p{
+  
+  display: inline;
+  justify-content: space-between;
+}
+
+.link{
+  text-decoration: none;
+}
+
+.protein-button, 
+.fruit-button,
+.carbohydrate-button,
+.vegetable-button,
+.seasonings-button
+{
+  background-color: #4CAF50; /* Set the background color */
+  border: none; /* Remove the default button border */
+  color: white; /* Set the text color */
+  padding: 10px 20px; /* Set padding for the button */
+  text-align: center; /* Center the text horizontally */
+  text-decoration: none; /* Remove default underline */
+  display: inline-block; /* Display as inline-block element */
+  font-size: 16px; /* Set the font size */
+  cursor: pointer; /* Add cursor pointer on hover */
+  border-radius: 4px; /* Add some border radius */
+}
+
+
+.protein-button:hover,
+.fruit-button:hover,
+.carbohydrate-button:hover,
+.vegetable-button:hover,
+.seasonings-button:hover 
+{
+  background-color: #45a049; /* Change the background color on hover */
+}
+
+
+h1{
+  text-align: center;
+}
+
+
+.sign-in-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.google-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url('./components/Ingredients/PicturesNav/7123025_logo_google_g_icon.png');
+  background-size: cover;
+  margin-right: 8px;
+  padding: 10px;
+
+}

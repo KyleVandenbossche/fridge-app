@@ -1,14 +1,11 @@
 import { useContext } from "react";
 import { FridgeContext } from "../../context/FridgeContextProvider";
+import Recipe from "../../models/Ingredients";
 
 export function CarbGrid() {
   const { fridge, addFridgeItem } = useContext(FridgeContext);
 
   const carbohydrates: string[] = [
-    "Rice",
-    "Bread",
-    "Pasta",
-    "Potatoes",
     "Quinoa",
     "Oats",
     "Barley",
@@ -44,7 +41,7 @@ export function CarbGrid() {
     "Barley",
     "Couscous",
     "Corn",
-    "Sweet potatoes",
+    "Sweet potatoes"
   ];
 
   // usestate for fridge
@@ -54,6 +51,7 @@ export function CarbGrid() {
 
   return (
     <>
+    <h1>Carbohydrates</h1>
       <div className="container">
         <div className="row">
           {carbohydrates.map((carbohydrate, index) => (
@@ -64,11 +62,11 @@ export function CarbGrid() {
                   <button onClick={() => handleIngredients(carbohydrate)}>
                     Add to Fridge
                   </button>
-                  <ol>
+                  {/* <ol>
                     {fridge.map((ingredient, i) => (
                       <li key={i}>{ingredient}</li>
                     ))}
-                  </ol>
+                  </ol> */}
                 </div>
               </div>
             </div>

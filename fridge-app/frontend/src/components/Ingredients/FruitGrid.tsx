@@ -51,6 +51,9 @@ export function FruitGrid() {
   }
 
   return (
+    <>
+    <h1>Fruit</h1>
+
     <div className="container">
       <div className="row">
         {fruits.map((fruit, index) => (
@@ -61,17 +64,18 @@ export function FruitGrid() {
                 <button onClick={() => handleIngredients(fruit)}>
                   Add to Fridge
                 </button>
-                <ol>
+                {/* <ol>
                   {fridge.map((ingredient, i) => (
                     <li key={i}>{ingredient}</li>
                   ))}
-                </ol>
+                </ol> */}
               </div>
             </div>
           </div>
         ))}
       </div>
     </div>
+    </>
   );
 }
 

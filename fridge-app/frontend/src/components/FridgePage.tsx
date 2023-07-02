@@ -4,15 +4,18 @@ import { FridgeContext } from "../context/FridgeContextProvider";
 const FridgePage = () => {
   const { fridge, removeFridgeItem } = useContext(FridgeContext);
   return (
-    <>
-      <div className="fridgeContainer">
+    <div className="fridge-container">
+    <div className="container">
+        <div className="card">
+                <div className="card-body">
+
         <h2>Fridge</h2>
         {fridge.length === 0 ? (
           <div>Please Add Items to your Fridge</div>
         ) : (
-          <ul>
+          <ul className='fridge-ul'>
             {fridge.map((ingredient: string, i: number) => (
-              <li key={i}>
+              <li className='fridge-li' key={i}>
                 <button onClick={() => removeFridgeItem(i)}>
                   {ingredient}
                 </button>
@@ -21,7 +24,9 @@ const FridgePage = () => {
           </ul>
         )}
       </div>
-    </>
+      </div>
+      </div>
+      </div>
   );
 };
 

@@ -52,6 +52,7 @@ export function VegetableGrid() {
 
   return (
     <>
+    <h1>Vegetables</h1>
       <div className="container">
         <div className="row">
           {vegetables.map((vegetable, index) => (
@@ -62,11 +63,11 @@ export function VegetableGrid() {
                   <button onClick={() => handleIngredients(vegetable)}>
                     Add to Fridge
                   </button>
-                  <ol>
+                  {/* <ol>
                     {fridge.map((ingredient, i) => (
                       <li key={i}>{ingredient}</li>
                     ))}
-                  </ol>
+                  </ol> */}
                 </div>
               </div>
             </div>

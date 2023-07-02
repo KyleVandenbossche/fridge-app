@@ -34,13 +34,12 @@
 /* MID-SIZE DISPLAY */
 /* MID-SIZE DISPLAY */
 @media (max-width: 1024px) {
-  .text-nav-container{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-
-
-}
+  .text-nav-container
+    {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+    }
 
 
 .link{
@@ -52,6 +51,23 @@
   .picture-link{
     display: none;
   }
+
+
+  .protein-button,
+  .fruit-button,
+  .carb-button,
+  .vegetable-button,
+  .seasoning-button
+  
+  {
+    padding: 10px;
+    margin-left: auto;
+  }
+
+  .ingredients-nav{
+    margin-right: 35px;
+  }
+
 }
 /* MID-SIZE DISPLAY */
 /* MID-SIZE DISPLAY */

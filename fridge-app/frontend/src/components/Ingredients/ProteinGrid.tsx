@@ -52,6 +52,7 @@ export function ProteinGrid() {
 
   return (
     <div className="container">
+      <h1>Proteins</h1>
       <div className="row">
         {proteins.map((protein, index) => (
           <div className="protein-item" key={index}>
@@ -61,11 +62,11 @@ export function ProteinGrid() {
                 <button onClick={() => handleIngredients(protein)}>
                   Add to Fridge
                 </button>
-                <ol>
+                {/* <ol>
                   {fridge.map((ingredient, i) => (
                     <li key={i}>{ingredient}</li>
                   ))}
-                </ol>
+                </ol> */}
               </div>
             </div>
           </div>

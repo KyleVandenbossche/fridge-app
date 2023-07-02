@@ -51,7 +51,10 @@ export function SeasoningsGrid() {
     addFridgeItem(ingredient);
   }
 
+
   return (
+    <>
+    <h1>Seasonings</h1>
     <div className="container">
       <div className="row">
         {seasonings.map((seasoning, index) => (
@@ -59,20 +62,19 @@ export function SeasoningsGrid() {
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title">{seasoning}</h5>
-                <button onClick={() => handleIngredients(seasoning)}>
-                  Add to Fridge
-                </button>
-                <ol>
+                <button onClick={() => handleIngredients(seasoning)}>Add to Fridge</button>
+                {/* <ol>
                   {fridge.map((ingredient, i) => (
                     <li key={i}>{ingredient}</li>
                   ))}
-                </ol>
+                </ol> */}
               </div>
             </div>
           </div>
         ))}
       </div>
     </div>
+    </>
   );
 }
 
@@ -124,15 +126,33 @@ export default SeasoningsGrid;
     ];
 
 
+      // usestate for fridge
+
+  const [ingredients, setIngredients] = useState(['']);
+
+  // function to add the ingredient to the fridge
+
+  function handleIngredients(ingredient: string){
+    setIngredients([...ingredients, ingredient])
+  }
+
+
+
   return (
     <>
     <div className="container">
       <div className="row">
+                
+                  {
+                    ingredients.map((ingredient,i) => <li key={i}>{ingredient}</li>)
+                  }
+                
         {seasonings.map((seasoning, index) => (
           <div className="col-lg-3 col-md-4 col-sm-6 col-6" key={index}>
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title">{seasoning}</h5>
+                <button key={index} onClick={() => handleIngredients(seasoning)}>Add to Fridge</button>
               </div>
             </div>
           </div>
