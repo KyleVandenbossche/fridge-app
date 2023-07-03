@@ -10,12 +10,12 @@ fridgeRouter.get("/fridge/:id", async (req, res) => {
   if (ObjectId.isValid(req.params.id) === false) {
     res.status(400).end();
   } else {
-    const _id = new ObjectId(req.params.id);
+    const userId = req.params.id;
     const client = await getClient();
     const result = await client
       .db()
       .collection<UserFridge>(collection)
-      .findOne({ _id: _id });
+      .findOne({ userId: userId });
     if (result === null) {
       res.status(404).send("Fridge Not Found");
     } else {
@@ -36,13 +36,13 @@ fridgeRouter.put("/fridge/:id", async (req, res) => {
     res.status(400).end();
   } else {
     const newUserFridge: UserFridge = req.body;
-    const _id = new ObjectId(req.params.id);
+    const userId = req.params.id;
     const client = await getClient();
     const result = await client
       .db()
       .collection<UserFridge>(collection)
       .updateOne(
-        { _id: _id },
+        { userId: userId },
         {
           $set: {
             fridgeContents: req.body.fridgeContents,
