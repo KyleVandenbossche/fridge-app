@@ -72,12 +72,17 @@ const RecipePage = () => {
             <ul>
               {recipes.map((recipe: any, i: number) => (
                 <li key={i}>
-                  <a href={recipe.recipe.url}>{getTitle(recipe.recipe.url)}</a>
-                  <p>{recipe.recipe.recipeLines}</p>
-                  <a href={recipe.recipe.url}>
-                    <img src={recipe.recipe.image} />
-                  </a>
-                  <p>Calories: {recipe.recipe.calories}</p>
+                  <div className="recipecontainer">
+                    <div className="recipeimage">
+                      {/* <a href={recipe.recipe.url}>{getTitle(recipe.recipe.url)}</a> */}
+                      <a href={recipe.recipe.url}>
+                        <img src={recipe.recipe.image} />
+                      </a>
+                    </div>
+                    <div className="calories">
+                      <p>Calories: {recipe.recipe.calories}</p>
+                    </div>
+                  </div>
                 </li>
               ))}
             </ul>
