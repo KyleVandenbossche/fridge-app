@@ -11,24 +11,37 @@ import { Route, Router, Routes } from "react-router-dom";
 import VegetableGrid from "./components/Ingredients/VegetableGrid";
 import RecipePage from "./components/RecipePage";
 import FridgePage from "./components/FridgePage";
+import { useContext } from "react";
+import AuthContext from "./context/AuthContext";
+import { signInWithGoogle, signOut } from "./firebaseConfig";
+import SignIn from "./components/SignIn";
 
 function App() {
+  const { user } = useContext(AuthContext);
   return (
     <div className="App">
-      <Header />
-      <IngredientNav />
-      {/* <SignInForm /> */}
-      {/* check if signed in true/false */}
+      {user ? (
+        <div>
+          <Header />
+          <IngredientNav />
+          {/* <SignInForm /> */}
+          {/* check if signed in true/false */}
 
-      <Routes>
-        <Route path="/proteins" element={<ProteinGrid />} />
-        <Route path="/fruits" element={<FruitGrid />} />
-        <Route path="/carbohydrates" element={<CarbGrid />} />
-        <Route path="/vegetables" element={<VegetableGrid />} />
-        <Route path="/seasonings" element={<SeasoningsGrid />} />
-        <Route path="/recipe" element={<RecipePage />} />
-        <Route path="/fridge" element={<FridgePage />} />
-      </Routes>
+          <Routes>
+            <Route path="/proteins" element={<ProteinGrid />} />
+            <Route path="/fruits" element={<FruitGrid />} />
+            <Route path="/carbohydrates" element={<CarbGrid />} />
+            <Route path="/vegetables" element={<VegetableGrid />} />
+            <Route path="/seasonings" element={<SeasoningsGrid />} />
+            <Route path="/recipe" element={<RecipePage />} />
+            <Route path="/fridge" element={<FridgePage />} />
+          </Routes>
+        </div>
+      ) : (
+        <div>
+          <SignIn />
+        </div>
+      )}
     </div>
   );
 }
