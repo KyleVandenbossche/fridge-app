@@ -272,6 +272,11 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: rgb(129, 129, 229);
+  color: white;
+}
+
 ol {
   margin-top: 10px;
   padding-left: 20px;
