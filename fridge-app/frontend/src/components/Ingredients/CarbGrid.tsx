@@ -5,6 +5,8 @@ import Recipe from "../../models/Ingredients";
 export function CarbGrid() {
   const { fridge, addFridgeItem } = useContext(FridgeContext);
 
+  const carbpics: string[] = ["a", "b", "c"];
+
   const carbohydrates: string[] = [
     "Quinoa",
     "Oats",
@@ -41,7 +43,7 @@ export function CarbGrid() {
     "Barley",
     "Couscous",
     "Corn",
-    "Sweet potatoes"
+    "Sweet potatoes",
   ];
 
   // usestate for fridge
@@ -51,13 +53,16 @@ export function CarbGrid() {
 
   return (
     <>
-    <h1>Carbohydrates</h1>
+      <h1>Carbohydrates</h1>
       <div className="container">
         <div className="row">
           {carbohydrates.map((carbohydrate, index) => (
             <div className="carbs-item" key={index}>
               <div className="card">
                 <div className="card-body">
+                  <div className="cardpic">
+                    <img src={carbpics[index]}></img>
+                  </div>
                   <h5 className="card-title">{carbohydrate}</h5>
                   <button onClick={() => handleIngredients(carbohydrate)}>
                     Add to Fridge

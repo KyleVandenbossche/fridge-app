@@ -38,17 +38,12 @@ export function Header() {
       </div>
       <div className="contacts-container">
         <h1 className="logo">Fridge to Table</h1>
-        {user ? (
-          <div>
-            Welcome {user?.displayName}{" "}
-            <button className='sign-out-button' onClick={signOut}>Sign out</button>
-          </div>
-        ) : (
-          <div>
-            <button className='sign-in-button' onClick={signInWithGoogle}>Sign in with Google<span className="google-icon"></span></button>
-          
-          </div>
-        )}
+        <div>
+          Welcome {user?.displayName}{" "}
+          <button className="sign-out-button" onClick={signOut}>
+            Sign out
+          </button>
+        </div>
       </div>
     </div>
   );
