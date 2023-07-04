@@ -18,7 +18,7 @@ export function CarbGrid() {
     "Bread",
     "Pasta",
     "Potatoes",
-    "Quinoa",
+    /*"Quinoa",
     "Oats",
     "Barley",
     "Couscous",
@@ -43,7 +43,7 @@ export function CarbGrid() {
     "Barley",
     "Couscous",
     "Corn",
-    "Sweet potatoes",
+    "Sweet potatoes",*/
   ];
 
   // usestate for fridge

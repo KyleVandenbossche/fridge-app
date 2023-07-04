@@ -14,7 +14,7 @@ export function ProteinGrid() {
     "Turkey",
     "Bacon",
     "Ham",
-    "Chicken",
+    /*"Chicken",
     "Beef",
     "Salmon",
     "Pork",
@@ -43,7 +43,7 @@ export function ProteinGrid() {
     "Shrimp",
     "Turkey",
     "Bacon",
-    "Ham",
+    "Ham",*/
   ];
 
   function handleIngredients(ingredient: string) {

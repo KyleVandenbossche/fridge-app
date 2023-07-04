@@ -14,7 +14,7 @@ export function FruitGrid() {
     "Strawberry",
     "Kiwi",
     "Peach",
-    "Apple",
+    /*"Apple",
     "Banana",
     "Orange",
     "Mango",
@@ -43,7 +43,7 @@ export function FruitGrid() {
     "Pineapple",
     "Strawberry",
     "Kiwi",
-    "Peach",
+    "Peach",*/
   ];
 
   function handleIngredients(ingredient: string) {

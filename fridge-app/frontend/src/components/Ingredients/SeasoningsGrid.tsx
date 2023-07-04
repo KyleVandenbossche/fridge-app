@@ -15,7 +15,7 @@ export function SeasoningsGrid() {
     "Mint",
     "Cilantro",
     "Crushed Red Pepper",
-    "Pepper",
+    /*"Pepper",
     "Salt",
     "Paprika",
     "Garlic Powder",
@@ -44,7 +44,7 @@ export function SeasoningsGrid() {
     "Thyme",
     "Mint",
     "Cilantro",
-    "Crushed Red Pepper",
+    "Crushed Red Pepper",*/
   ];
 
   function handleIngredients(ingredient: string) {

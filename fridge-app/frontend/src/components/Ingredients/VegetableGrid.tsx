@@ -15,7 +15,7 @@ export function VegetableGrid() {
     "Zucchini",
     "Eggplant",
     "Green Beans",
-    "Lettuce",
+    /*"Lettuce",
     "Radish",
     "Onion",
     "Garlic",
@@ -44,7 +44,7 @@ export function VegetableGrid() {
     "Beetroot",
     "Cucumber",
     "Asparagus",
-    "Kale",
+    "Kale",*/
   ];
   function handleIngredients(ingredient: string) {
     addFridgeItem(ingredient);
