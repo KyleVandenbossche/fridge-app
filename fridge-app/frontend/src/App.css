@@ -1,332 +1,332 @@
 body {
-    color: black;
-    /* font-family: 'Space Grotesk', sans-serif; */
-    font-size: small;
-    background-color: whitesmoke;
+  color: black;
+  /* font-family: 'Space Grotesk', sans-serif; */
+  font-size: small;
+  background-color: whitesmoke;
 
-  }
+}
 
-  .header-container{
-    border-bottom: #333 1px solid;
-    padding: 15px;
-  }
+.header-container{
+  border-bottom: #333 1px solid;
+  padding: 15px;
+}
 
-  .logo{
-    font-size: 30px;
-    color: #333;
-  }
-  
-
-  
-  .form-container{
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    /* justify-content: center; */
-  }
-  
-  .favorite-container, .contact-button {
-    /* border: 1px red solid; */
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .contact-button {
-    margin: 15px;
-  }
-  
-  .favorite-text{
-    margin: 15px;
-    /* border: 1px red solid; */
-  
-  }
-
-  .card-container{
-    border: 1px solid red;
-    margin: 25px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* width: 100%;
-    height: 100%;
-    align-items: flex-end; */
-    /* Aligns the children items in a row direction */
-    /* display: flex;
-    /* flex-wrap: wrap; */ 
-  }
-  
-  .card {
-
-    width: 150px;
-    height: 100%;
-    margin: auto;
-    text-align: center;
-    border-radius: 15px;
-
-  }
+.logo{
+  font-size: 30px;
+  color: #333;
+}
 
 
-  .header-container{
-    display: flex;
-    justify-content: space-between;
-    /* border: 1px red solid; */
-    
-  }
-  
-  .menu-container{  
-    /* border: 1px red solid; */
-    margin-left: 50px;
-    z-index: 4;
-  
-  }
-  
-  .contacts-container{  
-    /* border: 1px red solid; */
-    margin-right: 50px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  
-  }
-  
-  .logo{
-    margin-left: 10px;
-  }
 
-  .sign-out-button {
-    background-color: #e63946;
-    color: white;
-    border: none;
-    padding: 4px 8px; /* Adjusted padding */
-    font-size: 12px; /* Adjusted font size */
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .sign-out-button:hover {
-    background-color: #c83d47;
-  }
-  
-  
-  
-  
-  
-  /* hamburger  */
-  /* hamburger  */
-  /* hamburger  */
-  #menu__toggle {
-    opacity: 0;
-  }
-  #menu__toggle:checked + .menu__btn > span {
-    transform: rotate(45deg);
-  }
-  #menu__toggle:checked + .menu__btn > span::before {
-    top: 0;
-    transform: rotate(0deg);
-  }
-  #menu__toggle:checked + .menu__btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  #menu__toggle:checked ~ .menu__box {
-    left: 0 !important;
-  }
-  .menu__btn {
-    position: fixed;
-    top: 40px;
-    left: 20px;
-    width: 26px;
-    height: 26px;
-    cursor: pointer;
-    z-index: 1;
-   
-  }
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: #616161;
-    transition-duration: .25s;
-    
+.form-container{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  /* justify-content: center; */
+}
 
-  }
-  .menu__btn > span::before {
-    content: '';
-    top: -8px;
-  }
-  .menu__btn > span::after {
-    content: '';
-    top: 8px;
-   
-  }
-  .menu__box {
-    display: block;
-    margin-top:50px;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 300px;
-    height: 110%;
-    margin: 0;
-    padding: 80px 0;
-    list-style: none;
-    background-color: whitesmoke;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-    transition-duration: .25s;
-    /* z-index: 3; */
-  }
-  .menu__item {
-    display: block;
-    padding: 12px 24px;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    transition-duration: .25s;
-  }
-  .menu__item:hover {
-    background-color: #CFD8DC;
-  }
-  
-  /* hamburger */
-  /* hamburger */
-  /* hamburger */
-  
+.favorite-container, .contact-button {
+  /* border: 1px red solid; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-button {
+  margin: 15px;
+}
+
+.favorite-text{
+  margin: 15px;
+  /* border: 1px red solid; */
+
+}
+
+.card-container{
+  border: 1px solid red;
+  margin: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* width: 100%;
+  height: 100%;
+  align-items: flex-end; */
+  /* Aligns the children items in a row direction */
+  /* display: flex;
+  /* flex-wrap: wrap; */ 
+}
+
+.card {
+
+  width: 150px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  border-radius: 15px;
+
+}
 
 
-  .card {
-    margin: 15px;
-  }
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px red solid; */
+  
+}
+
+.menu-container{  
+  /* border: 1px red solid; */
+  margin-left: 50px;
+  z-index: 4;
+
+}
+
+.contacts-container{  
+  /* border: 1px red solid; */
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.logo{
+  margin-left: 10px;
+}
+
+.sign-out-button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 4px 8px; /* Adjusted padding */
+  font-size: 12px; /* Adjusted font size */
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.sign-out-button:hover {
+  background-color: #c83d47;
+}
 
 
-  /* NAVBAR FOR INGREDIENTS */
-  /* NAVBAR FOR INGREDIENTS */
-  /* NAVBAR FOR INGREDIENTS */
 
 
-/* 
-  .hero{
-    height: 300px;
-    display: inline;
-  } */
+
+/* hamburger  */
+/* hamburger  */
+/* hamburger  */
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+.menu__btn {
+  position: fixed;
+  top: 40px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+ 
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #616161;
+  transition-duration: .25s;
+  
+
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+ 
+}
+.menu__box {
+  display: block;
+  margin-top:50px;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 110%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: orange;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+  /* z-index: 3; */
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: rgb(129, 129, 229);
+}
+
+/* hamburger */
+/* hamburger */
+/* hamburger */
+
+
+
+.card {
+  margin: 15px;
+}
+
+
+/* NAVBAR FOR INGREDIENTS */
+/* NAVBAR FOR INGREDIENTS */
+/* NAVBAR FOR INGREDIENTS */
+
 
 /* 
-  .protein-container{
-    height: 300px;
-    display: inline;
-  } */
-  .hero{
-    height: 300px;
-    display: inline;
-  }
-  .hero{
-    height: 300px;
-    display: inline;
-  }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: center;
-  }
+.hero{
+  height: 300px;
+  display: inline;
+} */
 
-  h1{
-    margin: auto;
+/* 
+.protein-container{
+  height: 300px;
+  display: inline;
+} */
+.hero{
+  height: 300px;
+  display: inline;
+}
+.hero{
+  height: 300px;
+  display: inline;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
 
-    
-  }
+h1{
+  margin: auto;
+
   
+}
+
+.fruit-item,
+.seasoning-item,
+.carbs-item,
+.protein-item,
+.vegetable-item {
+  flex-basis: calc(33.33% - 10px);
+  margin-bottom: 20px;
+}
+
+.card, .fridge-ul, .fridge-li {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+
+}
+
+.card-title {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+ol {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.fruit-item,
+.seasoning-item,
+.carbs-item,
+.protein-item,
+.vegetable-item{
+  flex-basis: calc(100% / 3);
+}
+
+@media (max-width: 992px) {
   .fruit-item,
   .seasoning-item,
   .carbs-item,
   .protein-item,
-  .vegetable-item {
-    flex-basis: calc(33.33% - 10px);
-    margin-bottom: 20px;
+  .vegetable-item
+   {
+    flex-basis: calc(100% / 2);
   }
-  
-  .card, .fridge-ul, .fridge-li {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-  
-  }
-  
-  .card-title {
-    margin-bottom: 10px;
-  }
-  
-  button {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  ol {
-    margin-top: 10px;
-    padding-left: 20px;
-  }
-  
+}
+
+@media (max-width: 576px) {
   .fruit-item,
   .seasoning-item,
   .carbs-item,
   .protein-item,
-  .vegetable-item{
-    flex-basis: calc(100% / 3);
+  .vegetable-item
+
+  {
+    flex-basis: 100%;
   }
+
   
-  @media (max-width: 992px) {
-    .fruit-item,
-    .seasoning-item,
-    .carbs-item,
-    .protein-item,
-    .vegetable-item
-     {
-      flex-basis: calc(100% / 2);
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .fruit-item,
-    .seasoning-item,
-    .carbs-item,
-    .protein-item,
-    .vegetable-item
-
-    {
-      flex-basis: 100%;
-    }
-
-    
 
 
-  }
+}
 
-  /* NAVBAR FOR INGREDIENTS */
-  /* NAVBAR FOR INGREDIENTS */
-  /* NAVBAR FOR INGREDIENTS */
+/* NAVBAR FOR INGREDIENTS */
+/* NAVBAR FOR INGREDIENTS */
+/* NAVBAR FOR INGREDIENTS */
 
 
 ul, li{
-  align-items: center;
-  margin-bottom: auto;
+align-items: center;
+margin-bottom: auto;
 
 }
 
 p{
-  
-  display: inline;
-  justify-content: space-between;
+
+display: inline;
+justify-content: space-between;
 }
 
 .link{
-  text-decoration: none;
+text-decoration: none;
 }
 
 .protein-button, 
@@ -335,16 +335,16 @@ p{
 .vegetable-button,
 .seasonings-button
 {
-  background-color: #4CAF50; /* Set the background color */
-  border: none; /* Remove the default button border */
-  color: white; /* Set the text color */
-  padding: 10px 20px; /* Set padding for the button */
-  text-align: center; /* Center the text horizontally */
-  text-decoration: none; /* Remove default underline */
-  display: inline-block; /* Display as inline-block element */
-  font-size: 16px; /* Set the font size */
-  cursor: pointer; /* Add cursor pointer on hover */
-  border-radius: 4px; /* Add some border radius */
+background-color: orange; /* Set the background color */
+border: none; /* Remove the default button border */
+color: white; /* Set the text color */
+padding: 10px 20px; /* Set padding for the button */
+text-align: center; /* Center the text horizontally */
+text-decoration: none; /* Remove default underline */
+display: inline-block; /* Display as inline-block element */
+font-size: 16px; /* Set the font size */
+cursor: pointer; /* Add cursor pointer on hover */
+border-radius: 4px; /* Add some border radius */
 }
 
 
@@ -354,40 +354,40 @@ p{
 .vegetable-button:hover,
 .seasonings-button:hover 
 {
-  background-color: #45a049; /* Change the background color on hover */
+background-color: rgb(129, 129, 229); /* Change the background color on hover */
 }
 
 
 h1{
-  text-align: center;
+text-align: center;
 }
 
 
 .sign-in-button{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: #333333;
-  font-family: Arial, sans-serif;
-  font-size: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px 10px;
+border: none;
+border-radius: 4px;
+background-color: #ffffff;
+color: #333333;
+font-family: Arial, sans-serif;
+font-size: 10px;
+font-weight: bold;
+text-transform: uppercase;
+cursor: pointer;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 }
 
 .google-icon {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background-image: url('./components/Ingredients/PicturesNav/7123025_logo_google_g_icon.png');
-  background-size: cover;
-  margin-right: 8px;
-  padding: 10px;
+display: inline-block;
+width: 25px;
+height: 25px;
+background-image: url('./components/Ingredients/PicturesNav/7123025_logo_google_g_icon.png');
+background-size: cover;
+margin-right: 8px;
+padding: 10px;
 
 }
