@@ -62,9 +62,6 @@ export function CarbGrid() {
             <div className="carbs-item" key={index}>
               <div className="card">
                 <div className="card-body">
-                  <div className="cardpic">
-                    <img src={carbpics[index]}></img>
-                  </div>
                   <h5 className="card-title">{carbohydrate}</h5>
                   <button onClick={() => handleIngredients(carbohydrate)}>
                     Add to Fridge
