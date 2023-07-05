@@ -7,11 +7,11 @@ body {
 }
 
 .App {
-  background-color: lightgreen;
+  background-color: rgb(176, 224, 230);
 }
 
 .header-container{
-  border-bottom: rgb(129, 129, 229) 1px solid;
+  border-bottom: rgb(100, 149, 237) 1px solid;
   padding: 15px;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 .logo:hover {
-  background-color: rgb(129, 129, 229);
+  background-color: rgb(255, 245, 238);
 }
 
 
@@ -102,7 +102,7 @@ body {
 }
 
 .sign-out-button {
-  background-color: rgb(129, 129, 229);
+  background-color: rgb(100, 149, 237);
   color: white;
   border: none;
   padding: 4px 8px; /* Adjusted padding */
@@ -156,7 +156,7 @@ body {
   position: absolute;
   width: 100%;
   height: 1px;
-  background-color: rgb(129, 129, 229);
+  background-color: rgb(100, 149, 237);
   transition-duration: .25s;
   
 
@@ -182,7 +182,7 @@ body {
   padding: 80px 0;
   list-style: none;
   background-color: orange;
-  box-shadow: 2px 2px 6px rgb(129, 129, 229);
+  box-shadow: 2px 2px 6px rgb(100, 149, 237);
   transition-duration: .25s;
   /* z-index: 3; */
 }
@@ -197,7 +197,7 @@ body {
   transition-duration: .25s;
 }
 .menu__item:hover {
-  background-color: rgb(129, 129, 229);
+  background-color: rgb(255, 245, 238);
 }
 
 /* hamburger */
@@ -271,13 +271,13 @@ h1{
 
 button {
   background-color: orange;
-  border: 1px solid rgb(129, 129, 229);
+  border: 1px solid rgb(100, 149, 237);
   padding: 5px 10px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: rgb(129, 129, 229);
+  background-color: rgb(100, 149, 237);
   color: white;
 }
 
@@ -292,6 +292,7 @@ ol {
 .protein-item,
 .vegetable-item{
   flex-basis: calc(100% / 3);
+  
 }
 
 @media (max-width: 992px) {
@@ -367,7 +368,7 @@ border-radius: 4px; /* Add some border radius */
 .vegetable-button:hover,
 .seasonings-button:hover 
 {
-background-color: rgb(129, 129, 229); /* Change the background color on hover */
+background-color: rgb(100, 149, 237); /* Change the background color on hover */
 }
 
 
@@ -383,7 +384,7 @@ justify-content: center;
 padding: 10px 10px;
 border: none;
 border-radius: 4px;
-background-color: #ffffff;
+background-color: orange;
 color: #333333;
 font-family: Arial, sans-serif;
 font-size: 10px;
