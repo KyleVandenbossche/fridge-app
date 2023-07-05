@@ -3,11 +3,26 @@ body {
   /* font-family: 'Space Grotesk', sans-serif; */
   font-size: small;
   background-color: whitesmoke;
+  height: 100vh;
+
 
 }
 
 .App {
   background-color: rgb(176, 224, 230);
+}
+
+.home-page-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fridge-to-table-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
 }
 
 .header-container{
