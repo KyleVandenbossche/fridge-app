@@ -15,22 +15,7 @@ Fridge to table is an App that you add the contents of your actual fridge into y
 ## Functionality 
 - Add items from your fridge, into your digital fridge and search for recipes!
 
-![match demo](demo/match_animation.gif)
-
-
-- Match all 8 animals to win the game
-
-![match demo](demo/win_animation.gif)
-
-
-- Click the Hint Button for a quick peek at the cards!
-
-![hint demo](demo/hint_animation.gif)
-
-- A look at the whole Hablo playing board!
-
-![hablo board](demo/hablo_board.PNG)
-
+![Recipe demo](fridge-app-demo.gif)
 
 
 
