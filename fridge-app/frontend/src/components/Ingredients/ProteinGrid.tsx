@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { FridgeContext } from "../../context/FridgeContextProvider";
+import AuthContext from "../../context/AuthContext";
 
 export function ProteinGrid() {
   const { fridge, addFridgeItem } = useContext(FridgeContext);
+  const { user } = useContext(AuthContext);
   const proteins: string[] = [
     "Chicken",
     "Beef",
@@ -47,7 +49,7 @@ export function ProteinGrid() {
   ];
 
   function handleIngredients(ingredient: string) {
-    addFridgeItem(ingredient);
+    addFridgeItem(user!.uid, ingredient);
   }
 
   return (

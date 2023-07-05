@@ -1,6 +1,10 @@
-import React, { useEffect, useState, ReactNode, useContext } from "react";
+import React, { useState, ReactNode } from "react";
 import { FridgeContextType } from "./FridgeContextModel";
-import AuthContext from "./AuthContext";
+import {
+  createFridgeAPI,
+  getFridgeAPI,
+  updateFridgeAPI,
+} from "../services/UserService";
 
 interface Props {
   children: ReactNode;
@@ -9,29 +13,35 @@ interface Props {
 export const FridgeContext = React.createContext<FridgeContextType>({
   fridge: [],
   getFridge: (uid) => {},
-  addFridgeItem: (ingredient) => {},
-  removeFridgeItem: (index) => {},
+  addFridgeItem: (uid, ingredient) => {},
+  removeFridgeItem: (uid, index) => {},
   createFridge: (uid) => {},
 });
 
 export function FridgeProvider({ children }: Props) {
-  const { user } = useContext(AuthContext);
-  const userID = user?.uid;
   const [fridge, addToFridge] = useState<string[]>([]);
 
-  const getFridge = (userID: any) => {
-    console.log(userID);
+  const getFridge = (userID: string) => {
+    getFridgeAPI(userID).then((response) =>
+      addToFridge(response.fridgeContents)
+    );
   };
 
-  const addFridgeItem = (item: string) => {
+  const addFridgeItem = (userID: string, item: string) => {
     addToFridge([...fridge!, item]);
+    console.log(fridge);
+    console.log(userID);
+    updateFridgeAPI(userID, fridge);
   };
 
-  const removeFridgeItem = (index: number) => {
+  const removeFridgeItem = (userID: string, index: number) => {
     addToFridge(fridge.filter((_, i) => i !== index));
+    updateFridgeAPI(userID, fridge);
   };
 
-  const createFridge = (userID: any) => {};
+  const createFridge = (userID: string) => {
+    createFridgeAPI(userID, []);
+  };
 
   return (
     <FridgeContext.Provider

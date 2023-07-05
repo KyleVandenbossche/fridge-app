@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { FridgeContext } from "../../context/FridgeContextProvider";
+import AuthContext from "../../context/AuthContext";
 
 export function FruitGrid() {
   const { fridge, addFridgeItem } = useContext(FridgeContext);
+  const { user } = useContext(AuthContext);
   const fruits: string[] = [
     "Apple",
     "Banana",
@@ -47,34 +49,34 @@ export function FruitGrid() {
   ];
 
   function handleIngredients(ingredient: string) {
-    addFridgeItem(ingredient);
+    addFridgeItem(user!.uid, ingredient);
   }
 
   return (
     <>
-    <h1>Fruit</h1>
+      <h1>Fruit</h1>
 
-    <div className="container">
-      <div className="row">
-        {fruits.map((fruit, index) => (
-          <div className="fruit-item" key={index}>
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">{fruit}</h5>
-                <button onClick={() => handleIngredients(fruit)}>
-                  Add to Fridge
-                </button>
-                {/* <ol>
+      <div className="container">
+        <div className="row">
+          {fruits.map((fruit, index) => (
+            <div className="fruit-item" key={index}>
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">{fruit}</h5>
+                  <button onClick={() => handleIngredients(fruit)}>
+                    Add to Fridge
+                  </button>
+                  {/* <ol>
                   {fridge.map((ingredient, i) => (
                     <li key={i}>{ingredient}</li>
                   ))}
                 </ol> */}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 }

@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { FridgeContext } from "../../context/FridgeContextProvider";
+import AuthContext from "../../context/AuthContext";
 
 export function VegetableGrid() {
   const { fridge, addFridgeItem } = useContext(FridgeContext);
+  const { user } = useContext(AuthContext);
 
   const vegetables: string[] = [
     "Carrot",
@@ -47,12 +49,12 @@ export function VegetableGrid() {
     "Kale",*/
   ];
   function handleIngredients(ingredient: string) {
-    addFridgeItem(ingredient);
+    addFridgeItem(user!.uid, ingredient);
   }
 
   return (
     <>
-    <h1>Vegetables</h1>
+      <h1>Vegetables</h1>
       <div className="container">
         <div className="row">
           {vegetables.map((vegetable, index) => (
