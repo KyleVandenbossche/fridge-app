@@ -15,6 +15,8 @@ Fridge to table is an App that you add the contents of your actual fridge into y
 ## Functionality 
 - Add items from your fridge, into your digital fridge and search for recipes!
 
+![Login Authenticator](fridge-app-demo-googleauth.gif)
+
 ![Recipe demo](fridge-app-demo.gif)
 
 
