@@ -1,10 +1,12 @@
 import { signInWithGoogle, signOut } from "../firebaseConfig";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import AuthContext from "../context/AuthContext";
 import { Link } from "react-router-dom";
+import axios, { AxiosResponse } from "axios";
 
 export function Header() {
   const { user } = useContext(AuthContext);
+
   return (
     <div className="header-container">
       <div className="menu-container">

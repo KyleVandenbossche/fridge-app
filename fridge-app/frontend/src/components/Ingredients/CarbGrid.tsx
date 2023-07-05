@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { FridgeContext } from "../../context/FridgeContextProvider";
 import Recipe from "../../models/Ingredients";
+import AuthContext from "../../context/AuthContext";
 
 export function CarbGrid() {
   const { fridge, addFridgeItem } = useContext(FridgeContext);
+  const { user } = useContext(AuthContext);
 
   const carbpics: string[] = ["a", "b", "c"];
 
@@ -48,7 +50,7 @@ export function CarbGrid() {
 
   // usestate for fridge
   function handleIngredients(ingredient: string) {
-    addFridgeItem(ingredient);
+    addFridgeItem(user!.uid, ingredient);
   }
 
   return (
