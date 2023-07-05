@@ -16,6 +16,7 @@ export const FridgeContext = React.createContext<FridgeContextType>({
   addFridgeItem: (uid, ingredient) => {},
   removeFridgeItem: (uid, index) => {},
   createFridge: (uid) => {},
+  addtoFridgeMethod: (fridge) => {},
 });
 
 export function FridgeProvider({ children }: Props) {
@@ -43,6 +44,10 @@ export function FridgeProvider({ children }: Props) {
     createFridgeAPI(userID, []);
   };
 
+  const addtoFridgeMethod = (fridge: string[]) => {
+    addToFridge(fridge);
+  };
+
   return (
     <FridgeContext.Provider
       value={{
@@ -51,6 +56,7 @@ export function FridgeProvider({ children }: Props) {
         addFridgeItem,
         removeFridgeItem,
         createFridge,
+        addtoFridgeMethod,
       }}
     >
       {children}

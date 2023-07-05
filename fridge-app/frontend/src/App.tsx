@@ -26,6 +26,7 @@ function App() {
           <IngredientNav />
 
           <Routes>
+            <Route path="/" element={<FridgePage />} />
             <Route path="/proteins" element={<ProteinGrid />} />
             <Route path="/fruits" element={<FruitGrid />} />
             <Route path="/carbohydrates" element={<CarbGrid />} />

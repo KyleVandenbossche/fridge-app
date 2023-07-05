@@ -4,4 +4,5 @@ export interface FridgeContextType {
   addFridgeItem: (uid: string, ingredient: string) => void;
   removeFridgeItem: (uid: string, index: number) => void;
   createFridge: (uid: string) => void;
+  addtoFridgeMethod: (fridge: string[]) => void;
 }
