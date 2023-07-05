@@ -1,21 +1,21 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FridgeContext } from "../context/FridgeContextProvider";
 import "./recipepage.css";
 import { getRecipes } from "../services/RecipeService";
+import AuthContext from "../context/AuthContext";
 
 const RecipePage = () => {
-  const { fridge } = useContext(FridgeContext);
+  const { fridge, getFridge } = useContext(FridgeContext);
   const [table, addToTable] = useState<string[]>([]);
   const [recipes, updateRecipes] = useState<any>([]);
+  const { user } = useContext(AuthContext);
+
+  useEffect(() => {
+    getFridge(user!.uid);
+  });
 
   const tableAdd = (ingredient: string) => {
     addToTable([...table!, ingredient]);
-  };
-
-  const getTitle = (url: any) => {
-    let full = url.split("/");
-    let title = full.slice(-1);
-    return title;
   };
 
   const getUserRecipes = () => {

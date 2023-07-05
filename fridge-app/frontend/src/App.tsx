@@ -15,40 +15,15 @@ import { useContext, useEffect } from "react";
 import AuthContext from "./context/AuthContext";
 import { signInWithGoogle, signOut } from "./firebaseConfig";
 import SignIn from "./components/SignIn";
-import axios, { AxiosResponse } from "axios";
-import { FridgeContext } from "./context/FridgeContextProvider";
 
 function App() {
   const { user } = useContext(AuthContext);
-  const { getFridge, createFridge } = useContext(FridgeContext);
-  useEffect(() => {
-    async function fetchData(): Promise<void> {
-      try {
-        const response: AxiosResponse = await axios.get(
-          `https://us-central1-recipes-31990.cloudfunctions.net/api/fridge/${
-            user!.uid
-          }`
-        );
-
-        if (response.status === 200) {
-          getFridge(user!.uid);
-        } else if (response.status === 404) {
-          // Call function for status 404
-          createFridge(user!.uid);
-        }
-      } catch (error) {
-        console.error("Error:", error);
-      }
-    }
-  }, []);
   return (
     <div className="App">
       {user ? (
         <div>
           <Header />
           <IngredientNav />
-          {/* <SignInForm /> */}
-          {/* check if signed in true/false */}
 
           <Routes>
             <Route path="/proteins" element={<ProteinGrid />} />
