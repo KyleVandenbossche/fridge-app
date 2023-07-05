@@ -5,14 +5,10 @@ import { getRecipes } from "../services/RecipeService";
 import AuthContext from "../context/AuthContext";
 
 const RecipePage = () => {
-  const { fridge, getFridge } = useContext(FridgeContext);
+  const { fridge } = useContext(FridgeContext);
   const [table, addToTable] = useState<string[]>([]);
   const [recipes, updateRecipes] = useState<any>([]);
   const { user } = useContext(AuthContext);
-
-  useEffect(() => {
-    getFridge(user!.uid);
-  });
 
   const tableAdd = (ingredient: string) => {
     addToTable([...table!, ingredient]);

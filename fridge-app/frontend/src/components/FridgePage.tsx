@@ -3,12 +3,18 @@ import { FridgeContext } from "../context/FridgeContextProvider";
 import AuthContext from "../context/AuthContext";
 
 const FridgePage = () => {
-  const { fridge, getFridge, removeFridgeItem } = useContext(FridgeContext);
+  const { fridge, getFridge, removeFridgeItem, createFridge } =
+    useContext(FridgeContext);
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    getFridge(user!.uid);
-  });
+    try {
+      getFridge(user!.uid);
+    } catch {
+      createFridge(user!.uid);
+    }
+  }, []);
+
   return (
     <div className="fridge-container">
       <div className="container">
@@ -36,3 +42,6 @@ const FridgePage = () => {
 };
 
 export default FridgePage;
+function addtoFridgeMethod(fridgeContents: any) {
+  throw new Error("Function not implemented.");
+}
