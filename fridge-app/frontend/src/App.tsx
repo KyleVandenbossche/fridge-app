@@ -15,6 +15,7 @@ import { useContext, useEffect } from "react";
 import AuthContext from "./context/AuthContext";
 import { signInWithGoogle, signOut } from "./firebaseConfig";
 import SignIn from "./components/SignIn";
+import NewUser from "./components/NewUser";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -26,7 +27,7 @@ function App() {
           <IngredientNav />
 
           <Routes>
-            <Route path="/" element={<FridgePage />} />
+            <Route path="/" element={<NewUser />} />
             <Route path="/proteins" element={<ProteinGrid />} />
             <Route path="/fruits" element={<FruitGrid />} />
             <Route path="/carbohydrates" element={<CarbGrid />} />
