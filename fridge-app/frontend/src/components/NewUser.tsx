@@ -2,13 +2,14 @@ import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
 import { Link } from "react-router-dom";
 import { FridgeContext } from "../context/FridgeContextProvider";
+import "./newuser.css";
 
 const NewUser = () => {
   const { fridge, createFridge, getFridge } = useContext(FridgeContext);
   const { user } = useContext(AuthContext);
   return (
     <>
-      <div className="App">
+      <div className="userbuttons">
         <h2>Are you a new User?</h2>
         <button onClick={() => createFridge(user!.uid)}>
           <Link to="/fridge">Yes</Link>
