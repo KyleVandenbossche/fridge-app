@@ -17,14 +17,9 @@ export function Header() {
 
         <ul className="menu__box">
           <li>
-            <a className="menu__item" href="#">
+            <Link to="/" className="menu__item">
               Home
-            </a>
-          </li>
-          <li>
-            <a className="menu__item" href="#">
-              Add Items to Fridge
-            </a>
+            </Link>
           </li>
           <li>
             <Link to="/recipe" className="menu__item">
