@@ -22,7 +22,7 @@ const RecipePage = () => {
   };
   return (
     <>
-      <div className="recipePageContainersContainer">
+      <div className="container">
         <div className="fridgeContainer">
           <h2 className="fridge-text">Fridge</h2>
           {fridge.length === 0 ? (
